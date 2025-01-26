@@ -73,7 +73,7 @@ for product in products:
     # Create a container for each product
     with st.container():
         st.markdown(f'<div class="product"><h3>{product["name"]}</h3>', unsafe_allow_html=True)
-        st.image(product["image"], use_column_width=True)
+        st.image(product["image"], use_container_width=True)
         st.markdown(f'<p>{product["description"]}</p></div>', unsafe_allow_html=True)
 
 # Footer
