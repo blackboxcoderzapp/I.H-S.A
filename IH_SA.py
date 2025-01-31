@@ -127,7 +127,7 @@ contact_form = """
 <input type="hidden" name="_captcha" value="false">
 <form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST">
     <input type="text" name="name" placeholder="your name" required>
-    <input type="email" name="email" placeholder="your phone number if you are pareent or staff member and FSK id if you are a student" required>
+    <input type="email" name="email" placeholder="your phone number if you are parent or staff member and FSK id if you are a student after you wrote your number or FSK id write ///@ for the conformation!" required>
     <textarea name="message" placeholder="you may write your order and requirements for that" required></textarea>
     <button type="submit">Send</button>
 </form>
