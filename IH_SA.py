@@ -39,7 +39,7 @@ st.markdown("""
     }
 
     /* Style inputs with type="text", select elements and textareas */
-input[type=email], select, textarea {
+input[type=email],input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
   border: 1px solid #ccc; /* Gray border */
