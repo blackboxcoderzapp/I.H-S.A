@@ -90,11 +90,10 @@ contact_form = """
                
 """
 
-
-   left_column, right_column = st.columns((2, 1))
-   with right_column:
+left_column, right_column = st.columns((2, 1))
+ with right_column:
        st_lottie(contact, height=350, key="coding")
-   with left_column:
+ with left_column:
        st.markdown(contact_form, unsafe_allow_html=True)
 
 form = """
