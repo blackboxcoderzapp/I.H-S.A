@@ -116,3 +116,4 @@ contact_form = """
 </form>      
                
 """
+st.markdown(contact_form, unsafe_allow_html=True)
