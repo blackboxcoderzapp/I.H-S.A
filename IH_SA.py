@@ -77,9 +77,9 @@ for product in products:
         st.markdown(f'<p>{product["description"]}</p></div>', unsafe_allow_html=True)
 
 # Footer
-st.markdown('<div class="footer">Visit us at the Business Fair!</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Visit us at the Business fair! Stall 7</div>', unsafe_allow_html=True)
 
-   contact_form = """
+contact_form = """
 <input type="hidden" name="_captcha" value="false">
 <form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST" >
  <input type="text" name="name" placeholder="your name" required >
