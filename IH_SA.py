@@ -91,6 +91,7 @@ contact_form = """
 """
 
 form = """
+<style>
 /* Style inputs with type="text", select elements and textareas */
 input[type=email], select, textarea {
   width: 100%; /* Full width */
@@ -117,4 +118,5 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-""", unsafe_allow_css = True)
+<style>
+""", unsafe_allow_html = True)
