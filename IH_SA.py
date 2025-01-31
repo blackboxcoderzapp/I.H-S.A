@@ -1,5 +1,8 @@
 import streamlit as st
+from streamlit_lottie import st_lottie  # You need to import this to display animations
+import requests
 
+# Set page config
 st.set_page_config(page_title="The Goated Stall", page_icon="😁", layout="centered")
 
 # Custom CSS for styling
@@ -77,50 +80,52 @@ for product in products:
         st.markdown(f'<p>{product["description"]}</p></div>', unsafe_allow_html=True)
 
 # Footer
-st.markdown('<div class="footer">Visit us at the Business fair! Stall 7</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Visit us at the Business Fair!</div>', unsafe_allow_html=True)
 
+# Contact Form
 contact_form = """
 <input type="hidden" name="_captcha" value="false">
-<form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST" >
- <input type="text" name="name" placeholder="your name" required >
- <input type="email" name="email" placeholder="your email" required >
- <textarea name="message" placeholder="you may write your message over here" required ></textarea>
- <button type="submit" >Send</button >
-</form>      
-               
+<form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST">
+    <input type="text" name="name" placeholder="your name" required>
+    <input type="email" name="email" placeholder="your email" required>
+    <textarea name="message" placeholder="you may write your message over here" required></textarea>
+    <button type="submit">Send</button>
+</form>
 """
 
+# Display form and Lottie animation
+contact = "https://assets9.lottiefiles.com/packages/lf20_oxs4kv4i.json"  # Example Lottie URL
 left_column, right_column = st.columns((2, 1))
- with right_column:
-       st_lottie(contact, height=350, key="coding")
- with left_column:
-       st.markdown(contact_form, unsafe_allow_html=True)
+with right_column:
+    st_lottie(contact, height=350, key="coding")
+with left_column:
+    st.markdown(contact_form, unsafe_allow_html=True)
 
-form = """
-/* Style inputs with type="text", select elements and textareas */
-input[type=email], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+# Custom CSS for form styling
+st.markdown("""
+    <style>
+    input[type=email], select, textarea {
+        width: 100%; 
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
 
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
 
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-""", unsafe_allow_css = True)
+    button:hover {
+        background-color: #45a049;
+    }
+    </style>
+""", unsafe_allow_html=True)
