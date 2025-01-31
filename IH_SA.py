@@ -120,14 +120,14 @@ for product in products:
         st.markdown(f'<p>{product["description"]}</p></div>', unsafe_allow_html=True)
 
 # Footer
-st.markdown('<div class="footer">Visit us at the Business Fair!</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Visit us at the Business Fair! stall 7!</div>', unsafe_allow_html=True)
 
 # Contact Form
 contact_form = """
 <input type="hidden" name="_captcha" value="false">
 <form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST">
     <input type="text" name="name" placeholder="your name" required>
-    <input type="email" name="email" placeholder="Write FSK id for student and number for others then write ///@ for conformation!" required>
+    <input type="email" name="email" placeholder="Write FSK id for student and number for others then write ///@gmail.com for conformation! Don't leave space!" required>
     <textarea name="message" placeholder="you may write your order and requirements for that" required></textarea>
     <button type="submit">Send</button>
 </form>
