@@ -124,7 +124,7 @@ st.markdown('<div class="footer">Visit us at the Business Fair! stall 7!</div>',
 
 # Contact Form
 contact_form = """
-<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_captcha" value="True">
 <form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST">
     <input type="text" name="name" placeholder="your name" required>
     <input type="email" name="email" placeholder="Write FSK id for student and number for others then write ///@gmail.com for conformation! Don't leave space!" required>
