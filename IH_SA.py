@@ -110,8 +110,8 @@ contact_form = """
 <input type="hidden" name="_captcha" value="false">
 <form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST" >
  <input type="text" name="name" placeholder="your name" required >
- <input type="email" name="email" placeholder="your email" required >
- <textarea name="message" placeholder="you may write your message over here" required ></textarea>
+ <input type="email" name="email" placeholder="your phone number if you are pareent or staff member and FSK id if you are a student" required >
+ <textarea name="message" placeholder="you may write your order and requiremnts for that" required ></textarea>
  <button type="submit" >Send</button >
 </form>      
                
