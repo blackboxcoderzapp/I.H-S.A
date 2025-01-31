@@ -39,31 +39,47 @@ st.markdown("""
     }
 
     /* Style inputs with type="text", select elements and textareas */
-input[type=email],input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+    input[type=email], input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */ 
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded borders */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
 
-/* Style the submit button with a specific background color etc */
-button[type=submit] {
-  background-color: #006400;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    /* Style the submit button with a specific background color */
+    button[type=submit] {
+        background-color: #006400;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease; /* Smooth transition for interactive effects */
+    }
 
+    /* When hovering over the button */
+    button[type=submit]:hover {
+        background-color: #90ee90; /* Lighter green on hover */
+        transform: scale(1.1); /* Slightly increase the button size */
+    }
 
-/* When moving the mouse over the submit button, add a darker green color */
-button[type=submit]:hover {
-  background-color: 90ee90;
-}
+    /* When the button is focused */
+    button[type=submit]:focus {
+        outline: none; /* Remove the outline */
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.6); /* Green glow on focus */
+    }
+
+    /* When the button is clicked */
+    button[type=submit]:active {
+        transform: scale(0.98); /* Slightly shrink the button when clicked */
+        box-shadow: 0 0 15px rgba(0, 128, 0, 0.8); /* Stronger green glow on click */
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -106,14 +122,16 @@ for product in products:
 # Footer
 st.markdown('<div class="footer">Visit us at the Business Fair!</div>', unsafe_allow_html=True)
 
+# Contact Form
 contact_form = """
 <input type="hidden" name="_captcha" value="false">
-<form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST" >
- <input type="text" name="name" placeholder="your name" required >
- <input type="email" name="email" placeholder="your phone number if you are pareent or staff member and FSK id if you are a student" required >
- <textarea name="message" placeholder="you may write your order and requiremnts for that" required ></textarea>
- <button type="submit" >Send</button >
-</form>      
-               
+<form action="https://formsubmit.co/s.kirtan.bhattar@fountainheadschools.org" method="POST">
+    <input type="text" name="name" placeholder="your name" required>
+    <input type="email" name="email" placeholder="your phone number if you are pareent or staff member and FSK id if you are a student" required>
+    <textarea name="message" placeholder="you may write your order and requirements for that" required></textarea>
+    <button type="submit">Send</button>
+</form>
 """
+
+# Display the contact form
 st.markdown(contact_form, unsafe_allow_html=True)
